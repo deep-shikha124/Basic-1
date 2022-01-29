@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,600;0,900;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizzing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*hero section*/
+#hero{
+    background-image: url(./images/img2.jpg);
+    background-color: black;
+    opacity: 1;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#hero .hero{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 5pc;
+    justify-content:flex-start;
+}
+#hero h1{
+    display: block;
+    width:fit-content;
+    font-size: 2rem;
+    position: relative;
+    color:transparent;
+    animation: text_reveal 1s ease forwards;
+    animation-delay: 1s;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}    
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: maroon;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}    
+#hero .cta{
+    display: inline-block;
+    padding: 10px 20px;
+    color:white;
+    background-color: transparent;
+    border: 3px solid yellow;
+    font: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    transition: .3s ease ;
+    transition-property: background-color, color;
+}
+#hero .cta:hover {
+    color: black;
+    background-color: yellow;
+}
+/* projects section starts*/
+#projects {}
+#projects .projects{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#projects .section-title{
+    font-size: 4rem;
+    font-weight: 370;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+#projects .section-title span{
+    color: yellow;
+}
+#projects .projects-top p{
+    font-size: 1.4rem;
+    margin-top: 15px;
+    font-weight: 350;
+    letter-spacing: .05rem; 
+
+}
+#projects .projects-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./images/download\ \(4\).jpg);
+    background-size:7rem;
+    margin: 10px 0%;
+    font-size: 1rem;
+    color:white;
+    font-family:serif;
+    letter-spacing: 0rem;
+    font-variant: small-caps ;
+}
+#projects .projects-item{
+    content: '';
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: linear-gradient(60deg,#29323c 0%,#485563 0%);
+    
+
+}
+#projects .projects-bottom .icon{
+    width: 80px;
+    left: 80px;
+    margin-bottom: 20px;
+}
+#projects .projects-bottom .icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}   
+    
+}
+/*projects section ends*/
+/*keyframes*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0; 
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+/*keyfrae ends*/
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: rgb(219, 219, 9);
+        font-weight: 500px;
+    }
+}
